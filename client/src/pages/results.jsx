@@ -8,7 +8,7 @@ const Results = () => {
     <div className="result-container">
       <div className="result-header">
        <div className="score">
-         <h2>{state.score}</h2>
+         <h2>{score}</h2>
         <p>Score</p>
        </div>
        <div className="head">
