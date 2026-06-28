@@ -52,12 +52,10 @@ Return ONLY valid JSON in this format:
   "suggestions": []
 }`;
 
-    // const model = client.getGenerativeModel({
-    //   model: "gemini-1.5-flash-latest",
-    // });
+    
 
     const model = client.getGenerativeModel({
-      model: "gemini-2.5-flash", // Use standard stable model name
+      model: "gemini-2.5-flash", // Use  model name
       generationConfig: {
         responseMimeType: "application/json", // Forces Gemini to return pure JSON
         responseSchema: {
@@ -73,15 +71,15 @@ Return ONLY valid JSON in this format:
       }
     });
 
-    // 2. Call the correct model method
+    //  Call the correct model method
     const result = await model.generateContent(prompt);
     const responseText = result.response.text();
 
-    // 3. Convert AI string → JSON safely
+    // Convert AI string → JSON safely
     const aiData = JSON.parse(responseText);
     console.log(aiData)
 
-    // 4. Send response to client
+    //Send response to client
     return res.json({
       success: true,
       ai: aiData,
