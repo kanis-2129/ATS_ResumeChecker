@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+
 import "./nav.css"
 const Navbar = () => {
   return (
