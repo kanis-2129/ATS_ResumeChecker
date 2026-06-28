@@ -55,7 +55,7 @@ const Home = () => {
     setLoading(true)
     try {
       const response = await axios.post(
-        "https://resumeiq-ai-backend-p1p4.onrender.com/",
+        "https://resumeiq-ai-backend-p1p4.onrender.com/api/resume-analyse",
         formData,
       );
 
