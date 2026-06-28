@@ -1,0 +1,116 @@
+#home-container{
+   min-height: 100vh; 
+   
+}
+
+.header-container{
+    width: 100%;
+    text-align: center;
+    
+}
+
+.header{
+    width: 40%;
+    margin:0 auto ;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.sub-header{
+    font-size: 14px;
+    font: 400;
+    color: gray;
+    padding: 10px 10px;
+    width: 45%;
+    margin: 0 auto;
+}
+
+/* Resume Upload Part */
+#resume-upload-container{
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+    border: 1px solid var(--primary-text);
+    margin-top: 60px;
+    background: linear-gradient(#f8fbfc, #c7f2fe);
+    border-radius: 20px;
+    box-shadow: 1px 0.5px #03495d;
+}
+
+#resume-change{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+     margin-top: 60px;
+    background: linear-gradient(#f8fbfc, #c7f2fe);
+    border-radius: 20px;
+    box-shadow: 1px 0.5px #03495d;
+}
+
+.drag-drop h2{
+    font-size: 24px;
+    padding:5px 10px;
+}
+
+.or{
+    padding: 20px 0;
+}
+
+.upload-resume{
+    background: var(--primary-btn-color);
+    padding: 15px;
+    width: 20%;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: wheat;
+}
+
+/* job description */
+.jobDescription {
+  display: flex;
+  justify-content: center;
+}
+
+#jd-input {
+  width: 55%;
+  min-height: 140px;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 30px 0;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.scanResume{
+   display: flex;
+   justify-content: center;
+   margin: 20px 0;
+}
+
+.scan-btn{
+    background: var(--primary-btn-color);
+    padding: 18px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 20%;
+    cursor: pointer;
+    
+}
+
+@media (max-width:780px){
+    .header{
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .sub-header{
+        width: 90%;
+    }
+}

@@ -1,0 +1,73 @@
+.nav-container{
+    margin: 15px 30px;
+    
+}
+
+.nav-container h1{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-text);
+    text-align: center;
+    padding-top:30px ;
+
+}
+
+/* .nav-account .icon{
+    width: 50px;
+    height: 50px;
+    background: var(--primary-btn-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.user-icon{
+   width: 40px;
+   height:40px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    color: wheat;
+    
+    
+
+}
+
+.icon:hover{
+    box-shadow: 2px 1px 1px 1px #beedfa;
+    cursor: pointer; 
+}
+
+.nav-account{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.reg-btn{
+    padding: 10px;
+    background: var(--primary-btn-color);
+    color: wheat;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow:2px 1.5px #024558 ;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reg-btn:focus{
+    box-shadow:2px 1.5px #06c2f6 ;
+    border: #06c2f6;
+}
+
+.reg-btn:hover{
+    box-shadow:2px 1.5px #06c2f6 ;
+    border: #066580;
+    color: rgb(236, 233, 233);
+}
+
+
+ */

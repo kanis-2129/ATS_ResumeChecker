@@ -1,0 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body{
+  background:linear-gradient(130deg,#bbe9f6, #daf3f9);
+} */
+
+:root{
+  --primary-color:#bbecf9;
+  --secondary-color:#08a5d0;
+  --primary-btn-color:linear-gradient(#0783a5 , #1091b4, #22c7f5);
+  --primary-text:#014356;
+  --icon-user:#0ba0c9;
+}
