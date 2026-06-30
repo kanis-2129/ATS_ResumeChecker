@@ -183,7 +183,6 @@
   transition: all 0.3s ease;
 }
 
-/* மவுஸ் கொண்டு செல்லும்போது (Hover Effect) */
 .result-suggestion li:hover {
   transform: translateX(8px); /* லேசாக வலது பக்கம் நகரும் */
   background: #f1f5f9;

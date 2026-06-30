@@ -59,6 +59,35 @@
     padding: 20px 0;
 }
 
+.duringDrop, .after-file{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.duringDrop img, .after-file img{
+    width: 70px;
+    height: 70px;
+
+}
+
+.after-file p {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(2, 73, 104);
+    padding: 20px 0;
+    
+}
+
+.duringDrop p{
+    font-size: 14px;
+    color: gray;
+}
 .upload-resume{
     background: var(--primary-btn-color);
     padding: 15px;

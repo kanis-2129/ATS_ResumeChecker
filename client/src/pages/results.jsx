@@ -39,7 +39,7 @@ const Results = () => {
 
       {/* Suggestions */}
       <div className="result-suggestion">
-        <h2>💡 Suggestions</h2>
+        <h2>✨ Suggestions</h2>
         <ul>
           {suggestions?.map((item, index)=>(
             <li key={index}>{item}</li>

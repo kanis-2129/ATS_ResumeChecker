@@ -3,11 +3,15 @@ import "./home.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../component/nav";
+import UploadImg from "../image/file-storage.png";
+import succesTick from "../image/done.png";
 const Home = () => {
   const [file, setFile] = useState(null);
   const [jobDescription, setJobDescription] = useState("");
   const [isDraging, setIsDraging] = useState(false);
-  const [loading,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false);
+  const [isDragOver, settIsDragOver] = useState(false);
+  const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
   const handleUploadResume = (e) => {
@@ -17,6 +21,7 @@ const Home = () => {
 
     if (selectedFile.type === "application/pdf") {
       setFile(selectedFile);
+      setSuccess(true)
     } else {
       alert("Please Select PDF files only");
     }
@@ -27,16 +32,22 @@ const Home = () => {
     const DragAndDropFile = e.dataTransfer.files[0];
     setFile(DragAndDropFile);
     setIsDraging(false);
+    settIsDragOver(false);
+    setSuccess(true);
   };
 
-  const handleDragLeave=(e)=>{
+  const handleDragLeave = (e) => {
     e.preventDefault();
-    setIsDraging(false)
-  }
+    setIsDraging(false);
+    settIsDragOver(false);
+    setSuccess(false);
+  };
 
   const handleDragOver = (e) => {
     e.preventDefault();
     setIsDraging(true);
+    settIsDragOver(true);
+    setSuccess(false);
   };
 
   const handleJobDescription = (e) => {
@@ -45,35 +56,33 @@ const Home = () => {
   };
 
   const handleScanResume = async () => {
-    if(!file){
-      alert("Upload your resume")
-      return
+    if (!file) {
+      alert("Upload your resume");
+      return;
     }
 
-    if(!jobDescription.trim()){
-      alert("Please enter the Job Description")
-      return
+    if (!jobDescription.trim()) {
+      alert("Please enter the Job Description");
+      return;
     }
     const formData = new FormData();
     formData.append("resume", file);
-    formData.append("jobDescription",jobDescription)
-    setLoading(true)
+    formData.append("jobDescription", jobDescription);
+    setLoading(true);
     try {
       const response = await axios.post(
         "https://resumeiq-ai-backend-p1p4.onrender.com/api/resume-analyse",
         formData,
       );
 
-      setLoading(false)
-      navigate("/result", {
-        state: response.data
-      });
-
+      setLoading(false);
       
+      navigate("/result", {
+        state: response.data,
+      });
     } catch (err) {
       alert("Something went wrong. Please try again.");
     }
-
   };
 
   return (
@@ -100,22 +109,42 @@ const Home = () => {
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
           >
-            <div className="drag-drop">
-              <h2>Ready to Analyze Your Resume?</h2>
-              <p>Upload your PDF resume and get instant ATS insights.</p>
-            </div>
+            {isDragOver ? (
+              <div className="duringDrop">
+                <img src={UploadImg} alt="upload-img" />
+                <p>Drop your resume</p>
+              </div>
+            ) : (
+              <div>
+                {success ? (
+                  <div className="after-file ">
+                    <img src={succesTick} alt="success-tick" />
+                    <p>{file.name}</p>
+                  </div>
+                ) : (
+                  <div>
+                    <div className="drag-drop">
+                      <h2>Ready to Analyze Your Resume?</h2>
+                      <p>
+                        Drag and Drop your Resume.
+                      </p>
+                    </div>
 
-            <p className="or">or</p>
+                    <p className="or">or</p>
 
-            <label className="upload-resume" >
-              {file ? file.name : "Upload Resume"}
-              <input
-              onChange={handleUploadResume} type="file" className="upload-btn" hidden />
-            </label>
-          </div>
-
-          <div className="duringDrop">
-            
+                    <label className="upload-resume">
+                      {file ? file.name : "Upload Resume"}
+                      <input
+                        onChange={handleUploadResume}
+                        type="file"
+                        className="upload-btn"
+                        hidden
+                      />
+                    </label>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="jobDescription">
@@ -128,9 +157,14 @@ const Home = () => {
             ></textarea>
           </div>
 
-          <div className="scanResume" >
-            <button disabled={loading}
-            onClick={handleScanResume} className="scan-btn">{loading?"Analysing...":"Scan Resume"}</button>
+          <div className="scanResume">
+            <button
+              disabled={loading}
+              onClick={handleScanResume}
+              className="scan-btn"
+            >
+              {loading ? "Analysing..." : "Scan Resume"}
+            </button>
           </div>
         </div>
       </section>
