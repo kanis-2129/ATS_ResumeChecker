@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./nav.css";
 const Navbar = () => {
   return (
