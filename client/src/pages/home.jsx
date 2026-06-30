@@ -29,6 +29,11 @@ const Home = () => {
     setIsDraging(false);
   };
 
+  const handleDragLeave=(e)=>{
+    e.preventDefault();
+    setIsDraging(false)
+  }
+
   const handleDragOver = (e) => {
     e.preventDefault();
     setIsDraging(true);
@@ -88,10 +93,12 @@ const Home = () => {
           </div>
 
           {/* Resume Upload part */}
+
           <div
             id={isDraging ? "resume-change" : "resume-upload-container"}
             onDrop={handleDragAndDrop}
             onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
           >
             <div className="drag-drop">
               <h2>Ready to Analyze Your Resume?</h2>
@@ -105,6 +112,10 @@ const Home = () => {
               <input
               onChange={handleUploadResume} type="file" className="upload-btn" hidden />
             </label>
+          </div>
+
+          <div className="duringDrop">
+            
           </div>
 
           <div className="jobDescription">

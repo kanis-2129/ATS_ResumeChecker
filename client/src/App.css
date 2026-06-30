@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 
-/* body{
+/* body.light{
   background:linear-gradient(130deg,#bbe9f6, #daf3f9);
 } */
+
+
 
 :root{
   --primary-color:#bbecf9;

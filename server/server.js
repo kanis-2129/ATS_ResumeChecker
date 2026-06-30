@@ -167,7 +167,12 @@ Return ONLY valid JSON in this format:
 });
 
 app.get("/", (req, res) => {
-  res.send("Server running....");
+  try{
+    res.send("Server running....");
+  }
+  catch(err){
+    console.log(err,"Error")
+  }
 });
 
 app.listen(PORT, () => {

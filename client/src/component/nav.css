@@ -1,18 +1,21 @@
 .nav-container{
     margin: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
 .nav-container h1{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     color: var(--primary-text);
     text-align: center;
-    padding-top:30px ;
+    
 
 }
 
-/* .nav-account .icon{
+.nav-account .icon{
     width: 50px;
     height: 50px;
     background: var(--primary-btn-color);
@@ -40,13 +43,38 @@
     cursor: pointer; 
 }
 
-.nav-account{
+.nav-features{
     display: flex;
     gap: 20px;
     align-items: center;
+    
 }
 
-.reg-btn{
+.theme{
+    display: flex;
+    gap: 20px;
+    background: lightblue;
+    padding: 10px;
+    border-radius: 30px;
+    width: 37%;
+
+}
+
+.light {
+    background: #012b36;
+}
+
+.dark {
+    background: var(--primary-color);
+}
+.theme-btn button{
+    outline: none;
+    border: none;
+    border-radius:100%;
+}
+
+
+.nav-btn{
     padding: 10px;
     background: var(--primary-btn-color);
     color: wheat;
@@ -58,7 +86,7 @@
     font-size: 16px;
 }
 
-.reg-btn:focus{
+.nav-btn:focus{
     box-shadow:2px 1.5px #06c2f6 ;
     border: #06c2f6;
 }
@@ -70,4 +98,4 @@
 }
 
 
- */
+

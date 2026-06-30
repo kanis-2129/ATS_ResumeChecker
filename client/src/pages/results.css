@@ -1,226 +1,212 @@
-:root{
-    --primary-text:#0f4c75;
-    --green:#16a34a;
-    --light-green:#dcfce7;
-    --red:#dc2626;
-    --light-red:#fee2e2;
-    --white:#fff;
-    --shadow:0 15px 35px rgba(0,0,0,.12);
+:root {
+  --primary-text: #0f4c75;
+  --green: #16a34a;
+  --light-green: #dcfce7;
+  --red: #dc2626;
+  --light-red: #fee2e2;
+  --white: #fff;
+  --shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-.result-container{
-    min-height:100vh;
-    background:linear-gradient(135deg,#f5fbff,#dff7fb);
-    padding-bottom:50px;
+.result-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5fbff, #dff7fb);
+  padding-bottom: 50px;
 }
 
 /* ================= HEADER ================= */
 
-.result-header{
-    display:flex;
-    align-items:center;
-    gap:45px;
-    padding:50px 100px;
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding: 50px 100px;
 }
 
-.score{
-    width:170px;
-    height:170px;
-    border:12px solid var(--green);
-    border-radius:50%;
-    background:var(--white);
+.score {
+  width: 170px;
+  height: 170px;
+  border: 12px solid var(--green);
+  border-radius: 50%;
+  background: var(--white);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    box-shadow:0 12px 30px rgba(22,163,74,.25);
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.25);
 
-    transition:.3s;
+  transition: 0.3s;
 }
 
-.score:hover{
-    transform:scale(1.05);
+.score:hover {
+  transform: scale(1.05);
 }
 
-.score h2{
-    font-size:48px;
-    margin:0;
+.score h2 {
+  font-size: 38px;
+  margin: 0;
 }
 
-.score p{
-    font-size:22px;
-    margin-top:5px;
+.score p {
+  font-size: 16px;
+  margin-top: 5px;
 }
 
-.head h1{
-    font-size:52px;
-    color:var(--primary-text);
-    margin-bottom:10px;
+.head h1 {
+  font-size: 32px;
+  color: var(--primary-text);
+  margin-bottom: 10px;
 }
 
-.head p{
-    color:#555;
-    font-size:22px;
+.head p {
+  color: #555;
+  font-size: 16px;
 }
 
 /* ================= SKILLS ================= */
 
-.skill-results{
-    display:flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
-    gap:40px;
-    margin-top:40px;
+.skill-results {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
 }
 
 .matching-skill,
-.missing-skill{
+.missing-skill {
+  width: 500px;
+  min-height: 250px;
 
-    width:420px;
-    min-height:250px;
+  border-radius: 20px;
+  background: white;
 
-    border-radius:20px;
-    background:white;
+  box-shadow: var(--shadow);
 
-    box-shadow:var(--shadow);
+  padding: 25px;
 
-    padding:25px;
-
-    transition:.3s;
+  transition: 0.3s;
 }
 
 .matching-skill:hover,
-.missing-skill:hover{
-    transform:translateY(-8px);
+.missing-skill:hover {
+  transform: translateY(-8px);
 }
 
-.matching-skill{
-
-    border-top:8px solid var(--green);
+.matching-skill {
+  border-top: 8px solid var(--green);
 }
 
-.missing-skill{
-
-    border-top:8px solid var(--red);
+.missing-skill {
+  border-top: 8px solid var(--red);
 }
 
-.matching-skill h2{
-    color:var(--green);
+.matching-skill h2 {
+  color: var(--green);
 }
 
-.missing-skill h2{
-    color:var(--red);
+.missing-skill h2 {
+  color: var(--red);
 }
 
-.skill-results ul{
-
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-
-    padding-top:25px;
+.skill-results ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 25px;
 }
 
-.skill-results li{
-
-    list-style:none;
-
-    padding:10px 20px;
-
-    border-radius:30px;
-
-    font-size:18px;
-    font-weight:600;
+.skill-results li {
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* Green badges */
 
-.matching-skill li{
-
-    background:var(--light-green);
-    color:var(--green);
+.matching-skill li {
+  background: var(--light-green);
+  color: var(--green);
 }
 
 /* Red badges */
 
-.missing-skill li{
-
-    background:var(--light-red);
-    color:var(--red);
+.missing-skill li {
+  background: var(--light-red);
+  color: var(--red);
 }
 
 /* ================= SUGGESTION ================= */
 
-.result-suggestion{
-
-    width:82%;
-
-    margin:60px auto;
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    box-shadow:var(--shadow);
+.result-suggestion {
+  width: 82%;
+  margin: 60px auto;
+  background: var(--white); /* வெளிப்படையான (transparent) பின்னணிக்கு பதில் வெள்ளை நிறம் பிரீமியமாக இருக்கும் */
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow);
 }
 
-.result-suggestion h2{
-
-    text-align:center;
-
-    font-size:40px;
-
-    margin-bottom:25px;
+.result-suggestion h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--primary-text);
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
-.result-suggestion ul{
-
-    list-style:none;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
+.result-suggestion ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
 }
 
-.result-suggestion li{
-
-    background:#f8fafc;
-
-    border-left:5px solid #f59e0b;
-
-    padding:15px 20px;
-
-    border-radius:8px;
-
-    font-size:18px;
+.result-suggestion li {
+  background: #f8fafc; /* சுத்தமான, லேசான பின்னணி */
+  border-left: 5px solid var(--primary-text); /* இடது பக்கத்தில் ஒரு அழகான பிரைமரி கலர் அக்சென்ட் கோடு */
+  padding: 18px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* லேசான, மென்மையான ஷேடோ */
+  
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
+/* மவுஸ் கொண்டு செல்லும்போது (Hover Effect) */
+.result-suggestion li:hover {
+  transform: translateX(8px); /* லேசாக வலது பக்கம் நகரும் */
+  background: #f1f5f9;
+  border-left-color: var(--green); /* ஹோவர் செய்யும்போது கிரீன் கலராக மாறும் */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
 /* ================= Animation ================= */
 
 .score,
 .matching-skill,
 .missing-skill,
-.result-suggestion{
-
-    animation:fadeUp .7s ease;
+.result-suggestion {
+  animation: fadeUp 0.7s ease;
 }
 
-@keyframes fadeUp{
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

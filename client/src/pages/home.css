@@ -39,7 +39,8 @@
 }
 
 #resume-change{
-    width: 65%;
+    width: 55%;
+    border: #03495d 2px dashed;
     margin: 0 auto;
     text-align: center;
     padding: 40px 0;
